@@ -1,1 +1,81 @@
-i
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hatho.YT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="overlay" id="overlay"></div>
+    
+    <header>
+        <div class="header-container">
+            <div class="site-title">hatho.YT</div>
+            <button class="hamburger" id="hamburger" aria-label="メニュー">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <nav id="nav">
+        <a href="#about">About</a>
+        <a href="#videos">動画一覧</a>
+        <a href="#rules">YouTube規約</a>
+    </nav>
+
+    <main>
+        <section id="about">
+            <h1>About</h1>
+            <div class="profile-section">
+                <h2>プロフィール</h2>
+                <p>主に映像と音響の制作をしています。</p>
+                <p>(Music Video, Motion Graphics, Stereophonic Sound, Audio Visualization, 翻唱, BCRやTeXなどのデータ視覚化, リグ作成 等)</p>
+                <p>また個人的にMMD系とVRM系のモデルやモーションの変換、UE5でのセットアップにご協力いただける方を随時募集しています。</p>
+                <p>(勉強を目的とするため代金はいただきません)</p>
+                <div class="contact-info">
+                    <p>お問合せ、ご依頼等ございましたらDMまたはDiscord(@8tho_)まで</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="videos">
+            <h1>動画一覧</h1>
+            <div class="video-container">
+                <iframe 
+                    src="https://www.youtube.com/embed/videoseries?list=PL6fVHT62hQqcHh-n3xRmK5lbFHx2kZoAg" 
+                    allowfullscreen
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+                </iframe>
+            </div>
+        </section>
+
+        <section id="rules">
+            <h1>YouTube規約</h1>
+            <div class="rules-section">
+                <h3>禁止事項</h3>
+                <ul>
+                    <li>チャンネル宣伝</li>
+                    <li>無償リクエスト</li>
+                </ul>
+            </div>
+            <div class="rules-section">
+                <h3>留意点</h3>
+                <ul>
+                    <li>コメントはすべて確認しています。</li>
+                    <li>虚偽の情報や当チャンネル／動画に無関係の場合は削除します。</li>
+                    <li>誹謗中傷等のより悪質な場合は事前通告なしに通報等の対処を行います。</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2020-2026 hatho creative</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
