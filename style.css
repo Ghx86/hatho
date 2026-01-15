@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+    background: #1a1a1a;
+    color: #e0e0e0;
+    line-height: 1.7;
+}
+
+header {
+    background: #202020;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 2px solid #2d5f3f;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #5fd68a;
+}
+
+.hamburger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: #5fd68a;
+    margin: 5px 0;
+    transition: 0.3s;
+    border-radius: 2px;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background: #252525;
+    transition: 0.3s;
+    padding-top: 80px;
+    box-shadow: -4px 0 12px rgba(0, 0, 0, 0.5);
+    z-index: 99;
+}
+
+nav.active {
+    right: 0;
+}
+
+nav a {
+    display: block;
+    padding: 1.2rem 2rem;
+    color: #e0e0e0;
+    text-decoration: none;
+    border-bottom: 1px solid #333;
+    transition: 0.2s;
+}
+
+nav a:hover {
+    background: #2d5f3f;
+    color: #5fd68a;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 50;
+}
+
+.overlay.active {
+    display: block;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+section {
+    padding-top: 1rem;
+    margin-bottom: 3rem;
+}
+
+section:target {
+    scroll-margin-top: 80px;
+}
+
+h1 {
+    color: #5fd68a;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 3px solid #2d5f3f;
+    padding-bottom: 0.5rem;
+}
+
+h2 {
+    color: #6ee09a;
+    font-size: 1.4rem;
+    margin: 2rem 0 1rem;
+}
+
+p {
+    margin-bottom: 1rem;
+    color: #c0c0c0;
+}
+
+.profile-section {
+    background: #242424;
+    padding: 2rem;
+    border-radius: 8px;
+    border-left: 4px solid #5fd68a;
+    margin-bottom: 2rem;
+}
+
+.profile-section p {
+    margin-bottom: 0.8rem;
+}
+
+.contact-info {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #333;
+    color: #b0b0b0;
+}
+
+.rules-section {
+    background: #242424;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.rules-section h3 {
+    color: #5fd68a;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.rules-section h3::before {
+    content: "▶";
+    color: #6ee09a;
+}
+
+.rules-section ul {
+    list-style: none;
+    padding-left: 1.5rem;
+}
+
+.rules-section li {
+    margin-bottom: 0.6rem;
+    color: #c0c0c0;
+    position: relative;
+}
+
+.rules-section li::before {
+    content: "・";
+    position: absolute;
+    left: -1rem;
+    color: #5fd68a;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    background: #000;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+footer {
+    background: #202020;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 4rem;
+    border-top: 2px solid #2d5f3f;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+@media (min-width: 768px) {
+    main {
+        padding: 3rem 2rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .profile-section {
+        padding: 2.5rem;
+    }
+}
